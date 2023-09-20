@@ -18,7 +18,7 @@ npx hardhat run scripts/getStorageAt.js
 ### Console Log
 
  <p align="center">
- <img height="250" height="auto" src="https://imgur.com/a/sSwnC9k">
+ <img height="250" height="auto" src="https://raw.githubusercontent.com/arapzz/Swisstronik_Early/main/Image/Screenshot%202023-09-21%20043403.png">
  </p>
 
 ```
