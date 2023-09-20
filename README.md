@@ -1,42 +1,45 @@
-# LearnWeb3DAO <> Swisstronik Challenge 
+# Swisstronik Challenge #3
 
+task: 
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+Make a JSON RPC call using eth_getStorageAt() to get the first storage variable (slot #0) of any deployed smart contract and explain what is the retrieved value or if there is any difference with other blockchains when using this RPC method.
 
 
 # Introduction
-### Token
-```
-Name   : ARAPZZ
-Symbol : ARP
-```
+
 ### Smart Contract
 ```
-0x0225A5435833C3921B04FF6553E641318Aa4DAf2
+0xf84Df872D385997aBc28E3f07A2E3cd707c9698a
 ```
-### Function Mint 100 Tokens
+### call provider.getStorageAt()
 ```
-function mint100tokens() public {
-    _mint(msg.sender, 100*10**18);
-}
+npx hardhat run scripts/getStorageAt.js                                    
 ```
-### Explorer Deploy
+### Console Log
+
+ <p align="center">
+ <img height="250" height="auto" src="https://imgur.com/a/sSwnC9k">
+ </p>
+
 ```
-https://explorer-evm.testnet.swisstronik.com/tx/0xb2578cdaa7faa1cdec14a4cca3f03925be930bebe54e8d3e4bb59242fb855b29
-```
-### Explorer Minting
-```
-https://explorer-evm.testnet.swisstronik.com/tx/0xb7b6e171857b51682eac37d4dc055de94397efc2e312fe146c626a96cf47a44f```
-```
-### Explorer Transfer
-```
-https://explorer-evm.testnet.swisstronik.com/tx/0x01d302b4938f79c3ea1c8e706deb9317c8527cc06e45792895bb7e6f300a9e8c```
+Getting Message from Swisstronik:
+BYTES:  0xc73e7f645a2bf1365a0903afa03a2cb5029ba989df7844b0fe7751b1ba918ea4
+string
+false
+
+Getting Message from Mumbai:
+BYTES:  0x0000000000000000000000000000000000000000000000000000000000000000
+string
+false
+
+Getting Message from Sepolia:
+BYTES:  0x0000000000000000000000000000000000000000000000000000000000000000
+string
+false
 ```
 
 # Usage
 ```shell
 npx hardhat test
-npx hardhat run scripts/deploy.js
-npx hardhat run scripts/mint.js
-npx hardhat run scripts/transfer.js
+npx hardhat run scripts/getStorageAt.js
 ```
