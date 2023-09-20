@@ -11,7 +11,7 @@ Make a JSON RPC call using eth_getStorageAt() to get the first storage variable 
 ```
 0xf84Df872D385997aBc28E3f07A2E3cd707c9698a
 ```
-### call provider.getStorageAt()
+### Call provider.getStorageAt()
 ```
 npx hardhat run scripts/getStorageAt.js                                    
 ```
