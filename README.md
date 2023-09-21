@@ -40,6 +40,9 @@ false
 
 # Usage
 ```shell
-npx hardhat test
+npm install --save-dev hardhat
+npx hardhat
+npm install --save-dev @nomicfoundation/hardhat-toolbox
+npx hardhat compile
 npx hardhat run scripts/getStorageAt.js
 ```
